@@ -3,7 +3,8 @@ import mongoose from 'mongoose';
 import bodyParser from 'body-parser';
 import dotenv from 'dotenv';
 import cors from 'cors';
-import userRouter from './routes/UserRoutes.js';
+import userRouter from './routes/userRoute.js';
+
 
 dotenv.config();
 
@@ -13,19 +14,18 @@ const port = 5000;
 //middleware
 app.use(cors());
 app.use(bodyParser.json());
-app.use(express.json());
 
 //Routes
-app.use('server/user', userRouter)
+app.use('/server/user', userRouter);
 
 //connection
 mongoose.connect(process.env.CONNECTION_STRING, {
-}).then(
+}).then(() => {
     console.log("MongoDB Connected")
-).catch(err => console.log(err));
+}).catch(err => console.log(err));
 
 
 
 app.listen(port, () => {
-    console.log(`server is running on ${port}`);
+    console.log(`server is running on port ${port}`);
 })
