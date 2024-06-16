@@ -35,8 +35,8 @@ function Home() {
       hover:bg-gray-300 transition-all text-black p-2 sm:p-1' placeholder='Company'/></div>
      
 
-      <div className='flex flex-col'><label for='adress' className='grid grid-cols-subgrid col-span-2 text-sm font-bold'>Address</label>
-      <input type='text'  id='adress' 
+      <div className='flex flex-col'><label for='address' className='grid grid-cols-subgrid col-span-2 text-sm font-bold'>Address</label>
+      <input type='text'  id='address' 
       className='border border-2 border-black rounded-sm outline-none focus:bg-gray-300
       hover:bg-gray-300 transition-all text-black p-2 sm:p-1' placeholder='Address'/></div>
       
